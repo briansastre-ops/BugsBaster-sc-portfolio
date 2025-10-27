@@ -199,8 +199,8 @@ const teamMembers = ref([
     ],
     social: {
       GitHub: 'https://github.com/briansastre-ops',
-      LinkedIn: 'https://www.linkedin.com/in/brian-sastre/',
-      Portafolio: 'https://briansastre-ops.github.io/',
+      LinkedIn: 'https://www.linkedin.com/in/brian-sastre-a137452a5/',
+      Portafolio: 'https://briansastre-portfolio.vercel.app/',
     },
     stats: {
       tecnologias: '10+',
@@ -293,34 +293,49 @@ const getSocialIcon = (platform) => {
 }
 </script>
 
-<style scoped>
+<style>
+/* ===== RESET GLOBAL ===== */
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
 
+html {
+  margin: 0;
+  padding: 0;
+  background-color: #0a0a0a;
+}
 
-html,
 body {
   margin: 0;
   padding: 0;
-  background-color: #000;
+  background-color: #0a0a0a;
   overflow-x: hidden;
 }
+</style>
 
-
+<style scoped>
 /* ===== ESTILOS GENERALES ===== */
 .portfolio-container {
   position: relative;
   min-height: 100vh;
+  width: 100%;
   background: radial-gradient(circle at top left, #0a0a0a, #121212 60%, #1e1e1e);
   color: #f5f5f5;
-  font-family: "Inter", sans-serif;
+  font-family: "Inter", -apple-system, BlinkMacSystemFont, "Segoe UI", sans-serif;
   overflow-x: hidden;
+  margin: 0;
+  padding: 0;
 }
 
 /* Fondo con cuadrícula animada */
 .bg-grid {
   position: absolute;
   inset: 0;
-  background-image: linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
-                    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
+  background-image: 
+    linear-gradient(90deg, rgba(255,255,255,0.05) 1px, transparent 1px),
+    linear-gradient(rgba(255,255,255,0.05) 1px, transparent 1px);
   background-size: 40px 40px;
   animation: gridMove 10s linear infinite;
   z-index: 0;
@@ -336,11 +351,12 @@ body {
   display: flex;
   justify-content: space-between;
   align-items: center;
-  padding: 1.2rem 2rem;
-  position: relative;
-  z-index: 10;
-  background: rgba(0,0,0,0.5);
-  backdrop-filter: blur(6px);
+  padding: 1rem 1.5rem;
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(0,0,0,0.8);
+  backdrop-filter: blur(10px);
   border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
@@ -348,7 +364,7 @@ body {
   display: flex;
   align-items: center;
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .logo-bracket {
@@ -357,7 +373,7 @@ body {
 }
 
 .logo-text {
-  margin: 0 6px;
+  margin: 0 0.4rem;
   letter-spacing: 0.5px;
 }
 
@@ -371,64 +387,81 @@ body {
   color: #f5f5f5;
   border: none;
   cursor: pointer;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-size: clamp(0.875rem, 2vw, 1rem);
+  padding: 0.5rem 1rem;
+  border-radius: 6px;
+  transition: all 0.3s;
 }
 
-.nav-link.active,
 .nav-link:hover {
+  background: rgba(0,255,195,0.1);
   color: #00ffc3;
 }
 
-/* ===== SECCIÓN PRINCIPAL ===== */
+.nav-link.active {
+  color: #00ffc3;
+  background: rgba(0,255,195,0.15);
+}
+
+/* ===== CONTENIDO PRINCIPAL ===== */
 .main-content {
   position: relative;
   z-index: 5;
-  padding: 3rem 2rem;
+  padding: clamp(1.5rem, 4vw, 3rem) clamp(1rem, 3vw, 2rem);
+  max-width: 1400px;
+  margin: 0 auto;
 }
 
+/* ===== SECCIÓN HERO ===== */
 .hero-section {
   text-align: center;
-  margin-bottom: 3rem;
+  margin-bottom: clamp(2rem, 5vw, 3rem);
+  padding: 1rem 0;
 }
 
 .hero-title {
-  font-size: 2.2rem;
+  font-size: clamp(1.75rem, 5vw, 2.5rem);
   font-weight: 700;
-  line-height: 1.3;
+  line-height: 1.2;
+  margin-bottom: 1rem;
 }
 
 .title-line {
   display: block;
+  margin: 0.3rem 0;
 }
 
 .gradient-text {
   background: linear-gradient(90deg, #00ffc3, #00bfff);
   -webkit-background-clip: text;
   -webkit-text-fill-color: transparent;
+  background-clip: text;
 }
 
 .hero-subtitle {
   color: #ccc;
-  font-size: 1rem;
+  font-size: clamp(0.875rem, 2.5vw, 1.1rem);
   margin-top: 0.5rem;
+  max-width: 600px;
+  margin-left: auto;
+  margin-right: auto;
 }
 
 /* ===== GRID DEL EQUIPO ===== */
 .team-grid {
   display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 2rem;
+  grid-template-columns: repeat(auto-fill, minmax(min(100%, 260px), 1fr));
+  gap: clamp(1.5rem, 3vw, 2rem);
   justify-items: center;
 }
 
 .member-card {
   position: relative;
   width: 100%;
-  max-width: 280px;
+  max-width: 320px;
   background: rgba(255,255,255,0.05);
   border-radius: 16px;
-  padding: 2rem 1.5rem;
+  padding: clamp(1.5rem, 3vw, 2rem);
   cursor: pointer;
   transition: all 0.4s ease;
   text-align: center;
@@ -436,6 +469,7 @@ body {
   animation: fadeUp 0.6s ease forwards;
   transform: translateY(10px);
   opacity: 0;
+  border: 1px solid rgba(255,255,255,0.05);
 }
 
 @keyframes fadeUp {
@@ -448,20 +482,26 @@ body {
 .member-card:hover {
   background: rgba(0,255,195,0.1);
   transform: translateY(-6px);
-  box-shadow: 0 0 12px rgba(0,255,195,0.3);
+  box-shadow: 0 8px 24px rgba(0,255,195,0.2);
+  border-color: rgba(0,255,195,0.3);
+}
+
+.card-inner {
+  position: relative;
+  z-index: 2;
 }
 
 .member-avatar {
-  width: 80px;
-  height: 80px;
+  width: clamp(70px, 15vw, 80px);
+  height: clamp(70px, 15vw, 80px);
   border-radius: 50%;
-  background: #00ffc3;
+  background: linear-gradient(135deg, #00ffc3, #00bfff);
   color: #0a0a0a;
   display: flex;
   align-items: center;
   justify-content: center;
   font-weight: 700;
-  font-size: 1.5rem;
+  font-size: clamp(1.2rem, 3vw, 1.5rem);
   margin: 0 auto 1rem auto;
   position: relative;
 }
@@ -475,26 +515,33 @@ body {
 }
 
 @keyframes spin {
-  from { transform: rotate(0); }
+  from { transform: rotate(0deg); }
   to { transform: rotate(360deg); }
 }
 
 .member-name {
   font-weight: 600;
-  font-size: 1.2rem;
+  font-size: clamp(1.1rem, 2.5vw, 1.3rem);
+  margin-bottom: 0.5rem;
 }
 
 .member-role {
   color: #aaa;
-  font-size: 0.95rem;
-  margin-bottom: 0.8rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  margin-bottom: 1rem;
+  line-height: 1.4;
+}
+
+.card-footer {
+  margin-top: 1rem;
 }
 
 .view-profile {
   color: #00ffc3;
   font-weight: 500;
-  font-size: 0.95rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
   transition: opacity 0.3s;
+  opacity: 0.8;
 }
 
 .member-card:hover .view-profile {
@@ -503,51 +550,63 @@ body {
 
 /* ===== PERFIL INDIVIDUAL ===== */
 .profile-view {
-  max-width: 900px;
+  max-width: 1000px;
   margin: 0 auto;
 }
 
 .back-button {
-  background: none;
-  border: none;
+  background: rgba(0,255,195,0.1);
+  border: 1px solid rgba(0,255,195,0.3);
   color: #00ffc3;
   cursor: pointer;
   margin-bottom: 1.5rem;
-  font-size: 1rem;
-  transition: color 0.3s;
+  font-size: clamp(0.9rem, 2vw, 1rem);
+  padding: 0.75rem 1.5rem;
+  border-radius: 8px;
+  transition: all 0.3s;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
 }
 
 .back-button:hover {
-  color: #00bfff;
+  background: rgba(0,255,195,0.2);
+  transform: translateX(-4px);
+}
+
+.back-arrow {
+  font-size: 1.2rem;
 }
 
 .profile-container {
   background: rgba(255,255,255,0.05);
   border-radius: 18px;
-  padding: 2rem;
-  box-shadow: 0 0 20px rgba(0,255,195,0.15);
+  padding: clamp(1.5rem, 4vw, 2.5rem);
+  box-shadow: 0 0 30px rgba(0,255,195,0.1);
+  border: 1px solid rgba(255,255,255,0.08);
 }
 
 .profile-header {
   display: flex;
   align-items: center;
-  gap: 2rem;
+  gap: clamp(1.5rem, 4vw, 2.5rem);
   flex-wrap: wrap;
-  justify-content: center;
+  margin-bottom: 2rem;
 }
 
 .profile-avatar-large {
-  width: 120px;
-  height: 120px;
+  width: clamp(100px, 20vw, 130px);
+  height: clamp(100px, 20vw, 130px);
   border-radius: 50%;
-  background: #00ffc3;
+  background: linear-gradient(135deg, #00ffc3, #00bfff);
   color: #0a0a0a;
-  font-size: 2rem;
+  font-size: clamp(1.5rem, 4vw, 2.2rem);
   font-weight: 700;
   display: flex;
   align-items: center;
   justify-content: center;
   position: relative;
+  flex-shrink: 0;
 }
 
 .avatar-ring-large {
@@ -558,114 +617,170 @@ body {
   animation: spin 5s linear infinite;
 }
 
+.profile-intro {
+  flex: 1;
+  min-width: 250px;
+}
+
 .profile-name {
-  font-size: 1.8rem;
+  font-size: clamp(1.5rem, 4vw, 2rem);
   font-weight: 600;
+  margin-bottom: 0.5rem;
 }
 
 .profile-role {
   color: #ccc;
-  font-size: 1rem;
+  font-size: clamp(0.95rem, 2.5vw, 1.1rem);
+  line-height: 1.4;
+  margin-bottom: 0.75rem;
 }
 
 .profile-meta {
   color: #aaa;
-  margin-top: 0.5rem;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
+  display: flex;
+  flex-wrap: wrap;
+  gap: 0.5rem;
+  align-items: center;
+}
+
+.meta-item {
+  display: flex;
+  gap: 0.3rem;
+}
+
+.meta-label {
+  font-weight: 500;
 }
 
 .meta-divider {
-  margin: 0 0.5rem;
+  color: rgba(255,255,255,0.3);
 }
 
 .profile-grid {
   display: grid;
-  gap: 1.5rem;
+  gap: clamp(1.2rem, 3vw, 1.5rem);
   margin-top: 2rem;
 }
 
 .profile-section {
   background: rgba(255,255,255,0.04);
   border-radius: 12px;
-  padding: 1.5rem;
+  padding: clamp(1.2rem, 3vw, 1.5rem);
   border-left: 3px solid #00ffc3;
+  transition: all 0.3s;
+}
+
+.profile-section:hover {
+  background: rgba(255,255,255,0.06);
+  border-left-width: 5px;
 }
 
 .section-header {
   display: flex;
   align-items: center;
-  gap: 0.5rem;
-  margin-bottom: 0.8rem;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
 }
 
 .section-icon {
-  font-size: 1.3rem;
+  font-size: clamp(1.2rem, 3vw, 1.4rem);
 }
 
 .section-title {
   font-weight: 600;
-  font-size: 1.1rem;
+  font-size: clamp(1rem, 2.5vw, 1.2rem);
 }
 
 .study-item {
-  margin-bottom: 0.5rem;
+  margin-bottom: 1rem;
+  padding-bottom: 1rem;
+  border-bottom: 1px solid rgba(255,255,255,0.05);
+}
+
+.study-item:last-child {
+  border-bottom: none;
+  margin-bottom: 0;
+  padding-bottom: 0;
 }
 
 .study-degree {
   font-weight: 500;
+  font-size: clamp(0.95rem, 2vw, 1.05rem);
+  margin-bottom: 0.3rem;
 }
 
 .study-institution,
 .study-year {
   color: #aaa;
-  font-size: 0.9rem;
+  font-size: clamp(0.85rem, 2vw, 0.9rem);
+  line-height: 1.4;
 }
 
 .skills-grid {
   display: flex;
   flex-wrap: wrap;
-  gap: 0.5rem;
+  gap: clamp(0.4rem, 1.5vw, 0.6rem);
 }
 
 .skill-tag {
   background: rgba(0,255,195,0.1);
   border: 1px solid rgba(0,255,195,0.3);
   border-radius: 8px;
-  padding: 0.3rem 0.7rem;
-  font-size: 0.85rem;
+  padding: 0.5rem 1rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
   color: #00ffc3;
+  transition: all 0.3s;
+}
+
+.skill-tag:hover {
+  background: rgba(0,255,195,0.2);
+  transform: translateY(-2px);
 }
 
 .bio-text {
   color: #ddd;
-  line-height: 1.5;
+  line-height: 1.6;
+  font-size: clamp(0.9rem, 2vw, 1rem);
 }
 
 .social-links {
   display: flex;
   flex-wrap: wrap;
-  gap: 1rem;
+  gap: clamp(0.8rem, 2vw, 1.2rem);
 }
 
 .social-link {
   display: flex;
   align-items: center;
-  gap: 0.4rem;
+  gap: 0.5rem;
   color: #00ffc3;
   text-decoration: none;
-  transition: color 0.3s;
+  padding: 0.6rem 1rem;
+  background: rgba(0,255,195,0.05);
+  border: 1px solid rgba(0,255,195,0.2);
+  border-radius: 8px;
+  transition: all 0.3s;
+  font-size: clamp(0.85rem, 2vw, 0.95rem);
 }
 
 .social-link:hover {
-  color: #00bfff;
+  background: rgba(0,255,195,0.15);
+  color: #fff;
+  transform: translateY(-2px);
+}
+
+.social-icon {
+  font-size: 1.2rem;
 }
 
 /* ===== FOOTER ===== */
 .footer {
   text-align: center;
-  padding: 2rem 0;
+  padding: clamp(1.5rem, 3vw, 2rem) 1rem;
   color: #777;
-  font-size: 0.9rem;
+  font-size: clamp(0.8rem, 2vw, 0.9rem);
+  border-top: 1px solid rgba(255,255,255,0.05);
 }
 
 /* ===== ANIMACIONES ===== */
@@ -691,22 +806,127 @@ body {
   transform: translateY(-20px);
 }
 
-/* ===== RESPONSIVE ===== */
-@media (max-width: 600px) {
-  .hero-title {
-    font-size: 1.8rem;
-  }
+/* ===== MEDIA QUERIES ===== */
 
+/* Tablets */
+@media (max-width: 768px) {
+  .header {
+    padding: 1rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: repeat(auto-fill, minmax(min(100%, 240px), 1fr));
+    gap: 1.5rem;
+  }
+  
   .profile-header {
     flex-direction: column;
-    align-items: center;
     text-align: center;
   }
+  
+  .profile-intro {
+    width: 100%;
+  }
+  
+  .profile-meta {
+    justify-content: center;
+  }
+}
 
+/* Móviles */
+@media (max-width: 480px) {
+  .header {
+    padding: 0.75rem 1rem;
+  }
+  
+  .logo {
+    font-size: 1rem;
+  }
+  
+  .nav-link {
+    padding: 0.4rem 0.75rem;
+    font-size: 0.9rem;
+  }
+  
+  .main-content {
+    padding: 1.5rem 1rem;
+  }
+  
+  .hero-title {
+    font-size: 1.5rem;
+  }
+  
+  .hero-subtitle {
+    font-size: 0.9rem;
+  }
+  
+  .team-grid {
+    grid-template-columns: 1fr;
+    gap: 1.5rem;
+  }
+  
+  .member-card {
+    max-width: 100%;
+  }
+  
+  .back-button {
+    width: 100%;
+    justify-content: center;
+    padding: 0.875rem 1rem;
+  }
+  
+  .profile-container {
+    padding: 1.5rem;
+  }
+  
   .profile-avatar-large {
     width: 100px;
     height: 100px;
+    font-size: 1.8rem;
+  }
+  
+  .profile-name {
     font-size: 1.5rem;
+  }
+  
+  .skills-grid {
+    gap: 0.5rem;
+  }
+  
+  .skill-tag {
+    padding: 0.4rem 0.8rem;
+    font-size: 0.85rem;
+  }
+  
+  .social-links {
+    gap: 0.75rem;
+  }
+  
+  .social-link {
+    flex: 1 1 calc(50% - 0.375rem);
+    justify-content: center;
+    min-width: 140px;
+  }
+}
+
+/* Pantallas muy pequeñas */
+@media (max-width: 360px) {
+  .hero-title {
+    font-size: 1.3rem;
+  }
+  
+  .member-avatar {
+    width: 60px;
+    height: 60px;
+    font-size: 1.2rem;
+  }
+  
+  .profile-section {
+    padding: 1rem;
+  }
+  
+  .social-link {
+    flex: 1 1 100%;
   }
 }
 </style>
