@@ -210,22 +210,20 @@ const teamMembers = ref([
   },
   {
     id: 2,
-    name: 'Sarah Martinez',
-    initials: 'SM',
-    age: 26,
-    role: 'Diseñadora UI/UX',
-    location: 'Nueva York, NY',
-    bio: 'Diseñadora creativa enfocada en crear experiencias de usuario intuitivas y atractivas. Experta en sistemas de diseño y prototipado.',
+    name: 'Candelaria Ribotta',
+    initials: 'CR',
+    age: 18,
+    role: 'Futura Desarrolladora y Diseñadora de Experiencias Digitales',
+    location: 'San Rafael, Mendoza, Argentina',
+    bio: 'Actualmente estudio la Tecnicatura en Programación en la Universidad Tecnológica Nacional de San Rafael, donde desarrollo habilidades en los distintos lenguajes de programación. Me apasiona combinar el diseño y la lógica para crear interfaces funcionales y visualmente atractivas. Disfruto del proceso creativo y técnico detrás de cada experiencia digital, desde la idea hasta el resultado final.',
     studies: [
-      { degree: 'Lic. en Diseño Gráfico', institution: 'Parsons School of Design', year: '2020' },
-      { degree: 'Certificado en UX Design', institution: 'Nielsen Norman Group', year: '2021' }
+      { degree: 'Tecnicatura en Programación', institution: 'UTN San Rafael', year: 'En curso' },
     ],
-    skills: ['Figma', 'Adobe XD', 'Prototipado', 'Investigación de Usuarios', 'Sistemas de Diseño', 'Animación'],
+    skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'Pseint'],
     social: {
-      Dribbble: 'https://dribbble.com',
-      Behance: 'https://behance.net',
-      LinkedIn: 'https://linkedin.com',
-      Instagram: 'https://instagram.com'
+      GitHub: 'https://github.com/ribcande13',
+      LinkedIn: 'https://www.linkedin.com/in/cande-ribotta-072b9736a/',
+      Instagram: 'https://www.instagram.com/canddribotta/'
     }
   },
   {
