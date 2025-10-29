@@ -228,22 +228,20 @@ const teamMembers = ref([
   },
   {
     id: 3,
-    name: 'Marcus Johnson',
-    initials: 'MJ',
-    age: 30,
-    role: 'Ingeniero DevOps',
-    location: 'Austin, TX',
-    bio: 'Entusiasta de la infraestructura y automatización. Experto en CI/CD, contenedores y plataformas en la nube. ',
+    name: 'Lourdes Eschler',
+    initials: 'LE',
+    age: 19,
+    role:'Estudiante de Programación',
+    location: 'San Rafael, Mendoza, Argentina',
+    bio: 'Soy estudiante de Programación en la Universidad Tecnológica Nacional(UTN), con entusiasmo por la tecnología y el desarrollo de software. Me interesa especialmente el desarrollo web y el diseño del mismo. Recientemente descubrí mi pasión por combinar la creatividad con la tecnología. Me interesa especialmente el desarrollo de videojuegos, el diseño visual y explorar cómo el arte puede enriquecer el mundo del software. ',
     studies: [
-      { degree: 'Lic. en Tecnología de la Información', institution: 'Universidad de Texas', year: '2017' },
-      { degree: 'Arquitecto de Soluciones AWS', institution: 'Amazon Web Services', year: '2019' }
+      { degree: 'Tecnicatura en Programación', institution: 'UTN San Rafael', year: 'En curso' },
     ],
-    skills: ['Kubernetes', 'Terraform', 'Jenkins', 'AWS', 'Linux', 'Python'],
+    skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'Pseint'],
     social: {
-      GitHub: 'https://github.com',
-      LinkedIn: 'https://linkedin.com',
-      Medium: 'https://medium.com',
-      Twitter: 'https://twitter.com'
+      GitHub: 'https://github.com/Luu102',
+      LinkedIn: 'https://www.linkedin.com/in/lourdes-eschler-b0bb9436a',
+      Instagram: 'https://www.instagram.com/lourdes.__7/'
     }
   },
   {
