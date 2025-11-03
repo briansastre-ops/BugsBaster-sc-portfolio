@@ -246,22 +246,19 @@ const teamMembers = ref([
   },
   {
     id: 4,
-    name: 'Emily Wong',
-    initials: 'EW',
-    age: 27,
-    role: 'Científica de Datos',
-    location: 'Seattle, WA',
-    bio: 'Apasionada por el análisis de datos, machine learning y visualización. Convierte datos en estrategias accionables.',
+    name: 'Rodrigo Funes',
+    initials: 'RF',
+    age: 29,
+    role: 'Desarrollador de software | Analista funcional ',
+    location: 'Ciudad Autónoma de Buenos Aires, Buenos Aires, Argentinagg',
+    bio: 'Desarrollador de software y analista funcional orientado a los detalles, con experiencia práctica en análisis de datos, mejora de procesos y desarrollo web utilizando JavaScript, Python, SQL y Git. Fuertes habilidades de comunicación y experiencia trabajando en equipos ágiles con múltiples áreas. Apasionado por el aprendizaje continuo y por resolver problemas reales mediante soluciones tecnológicas.',
     studies: [
-      { degree: 'Lic. en Matemáticas', institution: 'UC Berkeley', year: '2019' },
-      { degree: 'Maestría en Ciencia de Datos', institution: 'Carnegie Mellon', year: '2022' }
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' },
     ],
-    skills: ['Python', 'TensorFlow', 'SQL', 'R', 'Tableau', 'Machine Learning'],
+    skills: ['Python', 'JavaScript', 'SQL', 'Java', 'SQL Server', 'Vue.js', 'Express.js', 'Metodologías Ágiles'],
     social: {
-      GitHub: 'https://github.com',
-      LinkedIn: 'https://linkedin.com',
-      Kaggle: 'https://kaggle.com',
-      Twitter: 'https://twitter.com'
+      GitHub: 'https://github.com/RodrigoFunes',
+      LinkedIn: 'https://www.linkedin.com/in/rodrigo-funes-809a06182/'
     }
   }
   // ... continúa igual para los demás miembros
