@@ -260,6 +260,21 @@ const teamMembers = ref([
       GitHub: 'https://github.com/RodrigoFunes',
       LinkedIn: 'https://www.linkedin.com/in/rodrigo-funes-809a06182/'
     }
+  },
+  {id: 5,
+    name: 'Ian Ditlevsen',
+    initials: 'ID',
+    age: 26,
+    role: 'Desarrollador de Software',
+    location: 'San Rafael, Mendoza, Argentina',
+    bio: 'Soy estudiante en programacion en la universidad de la UTN de San Rafael actualmente terminando el primer año.',
+    studies: [
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+    ],
+    skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS'],
+    social: {
+      GitHub: 'https://github.com/Ditlevsen-77',
+    }
   }
   // ... continúa igual para los demás miembros
 ])
