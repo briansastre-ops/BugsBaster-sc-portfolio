@@ -153,6 +153,7 @@
                       :key="platform"
                       :href="link"
                       target="_blank"
+                      rel="noopener noreferrer"
                       class="social-link"
                     >
                       <span class="social-icon">{{ getSocialIcon(platform) }}</span>
@@ -181,13 +182,12 @@ const selectedMember = ref(null)
 
 const teamMembers = ref([
   {
-     
     id: 1,
     name: 'Brian Sastre',
     initials: 'BS',
     age: 23,
     role: 'Desarrollador Front-End | Técnico Electromecánico',
-    location: 'Entre Rios, Concepción del Uruguay, Argentina',
+    location: 'Entre Ríos, Concepción del Uruguay, Argentina',
     bio: 'Soy Técnico Electromecánico con un fuerte interés en el Front-End y una sólida formación en programación. Mi experiencia académica en la Escuela Técnica N° 2 Francisco Ramírez y mi continuo compromiso con el aprendizaje me han preparado para enfrentar desafíos en el desarrollo web. Soy proactivo, creativo y orientado a resultados, con habilidades avanzadas en React y TypeScript. Mi formación técnica me proporciona una perspectiva única para resolver problemas complejos y crear soluciones innovadoras.',
     studies: [
       { degree: 'Técnico Electromecánico', institution: 'Escuela Técnica N° 2 Francisco Ramírez', year: 'Egresado' },
@@ -200,7 +200,7 @@ const teamMembers = ref([
     social: {
       GitHub: 'https://github.com/briansastre-ops',
       LinkedIn: 'https://www.linkedin.com/in/brian-sastre-a137452a5/',
-      Portafolio: 'https://briansastre-portfolio.vercel.app/',
+      Portafolio: 'https://briansastre-portfolio.vercel.app/'
     },
     stats: {
       tecnologias: '10+',
@@ -217,7 +217,7 @@ const teamMembers = ref([
     location: 'San Rafael, Mendoza, Argentina',
     bio: 'Actualmente estudio la Tecnicatura en Programación en la Universidad Tecnológica Nacional de San Rafael, donde desarrollo habilidades en los distintos lenguajes de programación. Me apasiona combinar el diseño y la lógica para crear interfaces funcionales y visualmente atractivas. Disfruto del proceso creativo y técnico detrás de cada experiencia digital, desde la idea hasta el resultado final.',
     studies: [
-      { degree: 'Tecnicatura en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+      { degree: 'Tecnicatura en Programación', institution: 'UTN San Rafael', year: 'En curso' }
     ],
     skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'Pseint'],
     social: {
@@ -231,11 +231,11 @@ const teamMembers = ref([
     name: 'Lourdes Eschler',
     initials: 'LE',
     age: 19,
-    role:'Estudiante en Desarrollo y Diseño de software',
+    role: 'Estudiante en Desarrollo y Diseño de software',
     location: 'San Rafael, Mendoza, Argentina',
-    bio: 'Soy estudiante de Programación en la Universidad Tecnológica Nacional(UTN), con entusiasmo por la tecnología y el desarrollo de software. Me interesa especialmente el desarrollo web y el diseño del mismo. Recientemente descubrí mi pasión por combinar la creatividad con la tecnología. Me interesa especialmente el desarrollo de videojuegos, el diseño visual y explorar cómo el arte puede enriquecer el mundo del software. ',
+    bio: 'Soy estudiante de Programación en la Universidad Tecnológica Nacional(UTN), con entusiasmo por la tecnología y el desarrollo de software. Me interesa especialmente el desarrollo web y el diseño del mismo. Recientemente descubrí mi pasión por combinar la creatividad con la tecnología. Me interesa especialmente el desarrollo de videojuegos, el diseño visual y explorar cómo el arte puede enriquecer el mundo del software.',
     studies: [
-      { degree: 'Tecnicatura en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+      { degree: 'Tecnicatura en Programación', institution: 'UTN San Rafael', year: 'En curso' }
     ],
     skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS', 'Pseint'],
     social: {
@@ -249,11 +249,11 @@ const teamMembers = ref([
     name: 'Rodrigo Funes',
     initials: 'RF',
     age: 29,
-    role: 'Desarrollador de software | Analista funcional ',
-    location: 'Ciudad Autónoma de Buenos Aires, Buenos Aires, Argentinagg',
+    role: 'Desarrollador de software | Analista funcional',
+    location: 'Ciudad Autónoma de Buenos Aires, Buenos Aires, Argentina',
     bio: 'Desarrollador de software y analista funcional orientado a los detalles, con experiencia práctica en análisis de datos, mejora de procesos y desarrollo web utilizando JavaScript, Python, SQL y Git. Fuertes habilidades de comunicación y experiencia trabajando en equipos ágiles con múltiples áreas. Apasionado por el aprendizaje continuo y por resolver problemas reales mediante soluciones tecnológicas.',
     studies: [
-      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' }
     ],
     skills: ['Python', 'JavaScript', 'SQL', 'Java', 'SQL Server', 'Vue.js', 'Express.js', 'Metodologías Ágiles'],
     social: {
@@ -261,38 +261,54 @@ const teamMembers = ref([
       LinkedIn: 'https://www.linkedin.com/in/rodrigo-funes-809a06182/'
     }
   },
-  {id: 5,
+  {
+    id: 5,
     name: 'Ian Ditlevsen',
     initials: 'ID',
     age: 26,
     role: 'Desarrollador de Software',
     location: 'San Rafael, Mendoza, Argentina',
-    bio: 'Soy estudiante en programacion en la universidad de la UTN de San Rafael actualmente terminando el primer año.',
+    bio: 'Soy estudiante en programación en la universidad de la UTN de San Rafael actualmente terminando el primer año.',
     studies: [
-      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' }
     ],
     skills: ['Python', 'Java', 'JavaScript', 'HTML', 'CSS'],
     social: {
-      GitHub: 'https://github.com/Ditlevsen-77',
+      GitHub: 'https://github.com/Ditlevsen-77'
     }
   },
   {
     id: 6,
     name: 'Cristian Rosas',
-    initials: 'ID',
+    initials: 'CRo',
     age: 28,
     role: 'Desarrollador de Software',
     location: 'San Rafael, Mendoza, Argentina',
     bio: 'Soy actualmente estudiante de la carrera “Tecnicatura en Programación” en la universidad tecnológica nacional (UTN) de la Sede de San Rafael.',
     studies: [
-      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' }
     ],
     skills: ['Java', 'HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Programación Orientada a Objetos'],
     social: {
-      GitHub: 'https://github.com/CristianRosas96',
+      GitHub: 'https://github.com/CristianRosas96'
+    }
+  },
+  {
+    id: 7,
+    name: 'Tobias Carbajal',
+    initials: 'TC',
+    age: 21,
+    role: 'Desarrollador de aplicaciones',
+    location: 'San Rafael, Mendoza, Argentina',
+    bio: 'Soy estudiante en programación en la UTN San Rafael; actualmente termino el primer año.',
+    studies: [
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' }
+    ],
+    skills: ['HTML', 'CSS'],
+    social: {
+      GitHub: 'https://github.com/tobiascarbajal'
     }
   }
-  // ... continúa igual para los demás miembros
 ])
 
 const selectMember = (member) => {
@@ -301,19 +317,21 @@ const selectMember = (member) => {
 }
 
 const getSocialIcon = (platform) => {
+  // normalizamos a minúsculas para evitar problemas con mayúsculas/minúsculas
+  const key = platform.toString().toLowerCase()
   const icons = {
-    GitHub: '⚡',
-    LinkedIn: '💼',
-    Twitter: '🐦',
-    Portafolio: '🌐',
-    Dribbble: '🎨',
-    Behance: '🎭',
-    Instagram: '📸',
-    Medium: '✍️',
-    CodePen: '🖊️',
-    Kaggle: '📊'
+    github: '⚡',
+    linkedin: '💼',
+    twitter: '🐦',
+    portafolio: '🌐',
+    dribbble: '🎨',
+    behance: '🎭',
+    instagram: '📸',
+    medium: '✍️',
+    codepen: '🖊️',
+    kaggle: '📊'
   }
-  return icons[platform] || '🔗'
+  return icons[key] || '🔗'
 }
 </script>
 
@@ -339,6 +357,7 @@ body {
 }
 </style>
 
+<!-- Scoped styles (igual que los tuyos, sin cambios funcionales) -->
 <style scoped>
 /* ===== ESTILOS GENERALES ===== */
 .portfolio-container {
