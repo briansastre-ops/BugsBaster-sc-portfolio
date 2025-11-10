@@ -169,7 +169,7 @@
 
     <!-- Pie de página -->
     <footer class="footer">
-      <p>&copy; 2025 TechCollective. Innovando el futuro.</p>
+      <p>&copy; 2025 BugsBasters. Innovando el futuro.</p>
     </footer>
   </div>
 </template>
