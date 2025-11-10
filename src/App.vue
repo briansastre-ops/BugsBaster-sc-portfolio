@@ -275,6 +275,22 @@ const teamMembers = ref([
     social: {
       GitHub: 'https://github.com/Ditlevsen-77',
     }
+  },
+  {
+    id: 6,
+    name: 'Cristian Rosas',
+    initials: 'ID',
+    age: 28,
+    role: 'Desarrollador de Software',
+    location: 'San Rafael, Mendoza, Argentina',
+    bio: 'Soy actualmente estudiante de la carrera “Tecnicatura en Programación” en la universidad tecnológica nacional (UTN) de la Sede de San Rafael.',
+    studies: [
+      { degree: 'Tecnicatura Universitaria en Programación', institution: 'UTN San Rafael', year: 'En curso' },
+    ],
+    skills: ['Java', 'HTML', 'CSS', 'JavaScript', 'Git', 'GitHub', 'Programación Orientada a Objetos'],
+    social: {
+      GitHub: 'https://github.com/CristianRosas96',
+    }
   }
   // ... continúa igual para los demás miembros
 ])
